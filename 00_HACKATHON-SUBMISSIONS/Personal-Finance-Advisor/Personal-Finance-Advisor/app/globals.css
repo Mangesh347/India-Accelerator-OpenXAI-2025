@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 236, 236, 241; /* Light gray text */
+  --background-rgb: 52, 53, 65; /* ChatGPT dark background */
+  --primary-color: #10a37f; /* ChatGPT green */
+  --accent-color: #565869; /* Subtle gray for accents */
+  --secondary-color: #202123; /* Dark sidebar/chat contrast */
+  --neutral-light: #ececf1; /* Very light gray for text */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(var(--background-rgb));
+  color: rgb(var(--foreground-rgb));
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--neutral-light);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* Input Fields */
+input[type="number"],
+input[type="text"] {
+  background-color: #40414f; /* ChatGPT input bg */
+  border: 1px solid #565869;
+  color: var(--neutral-light);
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Button */
+button {
+  background-color: var(--primary-color); /* ChatGPT green */
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0d8a6a;
+  transform: scale(1.05);
+}
+
+/* Layout Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  background-color: #444654; /* ChatGPT chat bubble bg */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: var(--neutral-light);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Flex + Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #202123;
+  color: var(--neutral-light);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Input checkbox styling */
+input[type="checkbox"] {
+  accent-color: var(--primary-color);
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
