@@ -1,0 +1,244 @@
+body {
+  background-color: #202124;
+  color: #e8eaed;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  width: 180px;
+  background-color: #2a2b30;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar .logo {
+  width: 50px;
+  height: 50px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.sidebar button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background-color: #242826;
+}
+
+.sidebar .menu {
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.sidebar .menu p {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.sidebar .menu a {
+  display: block;
+  color: #e8eaed;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sidebar .menu a:hover {
+  background-color: #33373b;
+}
+
+.chat-container {
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #202124;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.chat-header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #e8eaed;
+  background-color: #2a2b30;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.messages-container {
+  overflow-y: auto;
+  max-height: 400px;
+  padding-right: 10px;
+}
+
+.chat-message {
+  max-width: 75%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #4caf50;
+  color: white;
+  align-self: flex-end;
+  border-radius: 20px 20px 0 20px;
+}
+
+.assistant-message {
+  background-color: #33373b;
+  color: #e8eaed;
+  align-self: flex-start;
+  border-radius: 20px 20px 20px 0;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #2a2b30;
+  border-top: 1px solid #33373b;
+  border-radius: 0 0 8px 8px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 12px;
+  background-color: #3c4043;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #3c4043;
+  cursor: not-allowed;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.typing-indicator div {
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background-color: #e8eaed;
+  animation: typing 1s infinite;
+}
+
+.typing-indicator div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-indicator div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.extra-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.extra-buttons button {
+  background-color: #444;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.extra-buttons button:hover {
+  background-color: #333;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background-color: #2a2b30;
+}

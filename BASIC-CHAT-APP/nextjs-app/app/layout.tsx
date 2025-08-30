@@ -1,5 +1,6 @@
-import { Metadata, Viewport } from "next";
+import "./style/styles.css";  // Correct path based on your folder structure
 
+import { Metadata, Viewport } from "next";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -28,11 +29,10 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html>
-        <head />
-        <body>{children}</body>
-      </html>
-    </>
+    <html lang="en">
+      <body className="custom-body">
+        {children}
+      </body>
+    </html>
   );
 }
